@@ -1,0 +1,16 @@
+<div class="album text-muted">
+  <div class="container">
+    <div id="msg" style="display: none;"></div>
+    <div class="row">
+      <div class="card" *ngFor="let shop of preferredshops" id="{{ shop.id }}">
+        <div class="caption">{{ shop.productName }}</div>
+        <img src="{{ shop.productImage }}" alt="Image Not Found">
+        <div class="button-group">
+          <a class="btn btn-danger" role="button" (click)="shopRemoved(shop.id)">
+            Remove
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

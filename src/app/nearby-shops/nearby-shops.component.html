@@ -1,0 +1,19 @@
+<div class="album text-muted">
+  <div class="container">
+    <div class="alert alert-success alert-dismissable" id="msg" style="display: none;"></div>
+    <div class="row">
+      <div class="card" *ngFor="let shop of nearbyshops" id="{{ shop.id }}" >
+        <div class="caption">{{ shop.productName }}</div>
+        <img src="{{ shop.productImage }}" alt="Image Not Found">
+        <div class="button-group">
+          <a class="btn btn-danger" role="button" (click)="shopDisliked(shop.id)">
+            Dislike
+          </a>
+          <a class="btn btn-success" role="button" (click)="shopLiked(shop.id)">
+            Like
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

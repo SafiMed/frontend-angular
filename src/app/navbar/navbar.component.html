@@ -1,0 +1,26 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="#">Shopping</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav ml-auto">
+          <li id="NearbyShops" class="nav-item" routerLinkActive="active">
+            <a class="nav-link" [routerLink]="['/nearby-shops']">
+              Nearby Shops
+            </a>
+          </li>
+          <li id="PreferredShops" class="nav-item" routerLinkActive="active">
+            <a class="nav-link" [routerLink]="['/preferred-shops']">
+              My preferred Shops
+            </a>
+          </li>
+          <li id="logout" class="nav-item" routerLinkActive="active">
+            <a class="nav-link disabled">
+              Logout
+            </a>
+          </li>
+        </ul>
+      </div>
+</nav>
