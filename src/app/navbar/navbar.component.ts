@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { ShopService } from '../services/shop.service';
+
 declare var $: any;
 
 @Component({
@@ -9,9 +11,17 @@ declare var $: any;
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private shopService: ShopService) { }
 
   ngOnInit() {
   }
 
+  /**
+   * asking the api service for logout function
+   */
+  logout(){
+  	this.shopService.logout().subscribe(reponse =>{
+  		console.log(reponse);
+  	});
+  }
 }

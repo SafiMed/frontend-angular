@@ -60,4 +60,11 @@ export class ShopService {
   removeShop(id){
     return this.http.get(this.server+"remove-shop/"+id).map(res => res.json());
   }
+
+  /**
+   * sending logout order
+   */
+  logout(){
+    return this.http.get(this.server+"log-out/");
+  }
 }
